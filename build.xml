@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project ComBridge with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/Users/Administrator/workspace/ComBridge/PptConverter.jar">
+            <manifest>
+                <attribute name="Main-Class" value="PptConverterClient"/>
+                <attribute name="Class-Path" value=". PptConverter_lib/rmiio-2.0.0.jar PptConverter_lib/jacob.jar PptConverter_lib/commons-io-2.1.jar PptConverter_lib/commons-logging-1.1.1.jar"/>
+            </manifest>
+            <fileset dir="C:/Users/Administrator/workspace/ComBridge/bin"/>
+        </jar>
+        <delete dir="C:/Users/Administrator/workspace/ComBridge/PptConverter_lib"/>
+        <mkdir dir="C:/Users/Administrator/workspace/ComBridge/PptConverter_lib"/>
+        <copy file="C:/Users/Administrator/workspace/ComBridge/lib/rmiio-2.0.0.jar" todir="C:/Users/Administrator/workspace/ComBridge/PptConverter_lib"/>
+        <copy file="C:/Users/Administrator/workspace/ComBridge/lib/jacob.jar" todir="C:/Users/Administrator/workspace/ComBridge/PptConverter_lib"/>
+        <copy file="C:/Users/Administrator/workspace/ComBridge/lib/commons-io-2.1.jar" todir="C:/Users/Administrator/workspace/ComBridge/PptConverter_lib"/>
+        <copy file="C:/Users/Administrator/workspace/ComBridge/lib/commons-logging-1.1.1.jar" todir="C:/Users/Administrator/workspace/ComBridge/PptConverter_lib"/>
+    </target>
+</project>
