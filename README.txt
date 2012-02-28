@@ -1,8 +1,9 @@
 To run the server:
     1. Copy the PptConverter.jar file and PptConverter_lib directory to the Windows server that will be hosting the utility.
-    2. Create a CLASSPATH environment variable and add "C:\<path>\<to>\PptConverter.jar" to it.
-    3. Open a cmd window and run "start rmiregistry" (assuming "\<path_to_jre>\bin\" is in your PATH environment variable).
-    4. In the cmd window, run "start java PptConverterServer"
+    2. Be sure port 1099 is available on the server and not blocked by the firewall.
+    3. Create a CLASSPATH environment variable and add "C:\<path>\<to>\PptConverter.jar" to it.
+    4. AFTER the environment var is created, open a cmd window and run "start rmiregistry" (assuming "\<path_to_jre>\bin\" is in your PATH environment variable).
+    5. In the cmd window, run "start java PptConverterServer"
 
 
 To run the client:
